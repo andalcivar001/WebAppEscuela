@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div class="grafico"><app-top-3-cursos></app-top-3-cursos></div>
+<div class="grafico"><app-top-3-estudiantes></app-top-3-estudiantes></div>
+@if(estudiantes.length > 0){
+<h2 class="grafico">Total estudiantes: {{ estudiantes.length }}</h2>
+}@else{
+<p>No hay datos de estudiantes</p>
+} @if(cursos.length > 0){
+<h2 class="grafico">Total cursos: {{ cursos.length }}</h2>
+}@else{
+<p>No hay datos de cursos</p>
+}

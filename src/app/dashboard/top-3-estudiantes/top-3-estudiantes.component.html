@@ -1,0 +1,14 @@
+@if(datosD!.length > 0){
+<canvas
+  baseChart
+  [data]="barChartData"
+  [options]="barChartOptions"
+  [plugins]="barChartPlugins"
+  [legend]="barChartLegend"
+  [type]="'bar'"
+>
+</canvas>
+
+}@else{
+<h2>No hay datos para mostrar grafico de Top 3 estudiantes</h2>
+}

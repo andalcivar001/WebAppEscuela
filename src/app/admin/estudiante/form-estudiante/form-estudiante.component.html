@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="titulo-form">
+    <mat-toolbar>
+      <span> {{ titulo }}</span>
+    </mat-toolbar>
+  </div>
+  <br />
+  <form [formGroup]="form" class="form-container">
+    @if(id && id > 0){
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Id Empleado </mat-label>
+          <input matInput formControlName="id" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    }
+
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="nombre" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Apellido</mat-label>
+          <input matInput formControlName="apellido" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Edad</mat-label>
+          <input matInput formControlName="edad" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Cedula</mat-label>
+          <input matInput formControlName="cedula" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Correo</mat-label>
+          <input matInput formControlName="correo" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button
+        (click)="guardarForm()"
+        mat-raised-button
+        color="primary"
+        [disabled]="!form.dirty || form.invalid || form.pending"
+      >
+        Guardar
+      </button>
+      <button (click)="redireccionarGrid()" mat-raised-button color="warn">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
